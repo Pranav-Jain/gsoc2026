@@ -9,7 +9,7 @@ This implementation is based on the method presented in:
 
 [Paper on arXiv](https://arxiv.org/abs/2305.07570)
 
-The CGAL implementation was developed by **Pranav Jain** as part of **Google Summer of Code 2026**, under the guidance of **Martin Skrodzki** and **Andreas Fabri**.
+The CGAL implementation was developed by **Pranav Jain** as part of **[Google Summer of Code 2026](https://summerofcode.withgoogle.com/myprojects/details/GqDcvdfV)**, under the guidance of **Martin Skrodzki** and **Andreas Fabri**.
 
 **Issue raised can be found [here](https://github.com/CGAL/cgal/issues/9606)**
 
