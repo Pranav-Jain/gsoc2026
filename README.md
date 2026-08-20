@@ -11,6 +11,8 @@ This implementation is based on the method presented in:
 
 The CGAL implementation was developed by **Pranav Jain** as part of **Google Summer of Code 2026**, under the guidance of **Martin Skrodzki** and **Andreas Fabri**.
 
+**Issue raised can be found [here](https://github.com/CGAL/cgal/issues/9606)**
+
 ---
 
 ## Overview
