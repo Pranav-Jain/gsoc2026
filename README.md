@@ -209,7 +209,7 @@ The following examples illustrate the behavior of the reconstruction on differen
 
 ### Smooth Surfaces
 
-#### Kitten
+#### Kitten [(Input File)](inputs/kitten.xyz)
 
 <p align="center">
   <img src="images/kitten.png" width="800">
@@ -219,7 +219,7 @@ The following examples illustrate the behavior of the reconstruction on differen
   <em>Reconstruction of the kitten model.</em>
 </p>
 
-#### Shampoo Bottle
+#### Shampoo Bottle [(Input File)](inputs/shampoobottle.xyz)
 
 <p align="center">
   <img src="images/shampoo.png" width="800">
@@ -229,7 +229,7 @@ The following examples illustrate the behavior of the reconstruction on differen
   <em>Reconstruction of the shampoo bottle.</em>
 </p>
 
-#### Cup
+#### Cup [(Input File)](inputs/cup.xyz)
 
 <p align="center">
   <img src="images/cup.png" width="800">
@@ -239,7 +239,7 @@ The following examples illustrate the behavior of the reconstruction on differen
   <em>Reconstruction of the cup model.</em>
 </p>
 
-#### Toycat
+#### Toycat [(Input File)](inputs/toycat.xyz)
 
 <p align="center">
   <img src="images/toycat.png" width="800">
@@ -249,7 +249,7 @@ The following examples illustrate the behavior of the reconstruction on differen
   <em>Reconstruction of the toycat model.</em>
 </p>
 
-#### Duck
+#### Duck [(Input File)](inputs/duck.xyz)
 
 <p align="center">
   <img src="images/duck.png" width="800">
@@ -261,7 +261,7 @@ The following examples illustrate the behavior of the reconstruction on differen
 
 ### Sharp Features
 
-#### Cube
+#### Cube [(Input File)](inputs/cube.off)
 
 <p align="center">
   <img src="images/cube.png" width="800">
@@ -271,7 +271,7 @@ The following examples illustrate the behavior of the reconstruction on differen
   <em>Reconstruction of the cube model.</em>
 </p>
 
-#### Fandisk
+#### Fandisk [(Input File)](inputs/fandisk.off)
 
 <p align="center">
   <img src="images/fandisk.png" width="800">
@@ -281,7 +281,7 @@ The following examples illustrate the behavior of the reconstruction on differen
   <em>Reconstruction of the fandisk model.</em>
 </p>
 
-#### Wrench
+#### Wrench [(Input File)](inputs/wrench.xyz)
 
 <p align="center">
   <img src="images/wrench.png" width="800">
@@ -318,23 +318,6 @@ This becomes particularly important when requesting smaller target edge lengths.
 The current implementation allocates the complete grid, including cells that contain no input points. As a result, sufficiently small target edge lengths can cause very high memory consumption and may result in the reconstruction running out of memory.
 
 A future improvement would be to replace the dense box grid with a sparse spatial data structure in which memory usage depends primarily on occupied or relevant cells rather than on the complete volume of the input bounding box.
-
-## Implementation Details
-
-The implementation uses several CGAL components and data structures, including:
-
-- CGAL polygon meshes;
-- halfedge graph operations;
-- two-dimensional Delaunay triangulation;
-- geometric intersection predicates;
-- property maps;
-- local tangent-plane projections.
-
-The reconstruction explicitly maintains halfedge connectivity during surface growth.
-
-Faces are generated after the growth stage by traversing the resulting closed `next()` cycles and triangulating non-triangular polygons.
-
----
 
 ## Reference
 
